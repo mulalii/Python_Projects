@@ -6,8 +6,9 @@ import win32api
 import win32con
 import numpy as np
 
-# tiles_Position_array = np.array([377, 539], [475, 368], [560, 388], [643, 283])
-# tiles_Color_array = np.arrays([(22, 45, 86)], [(21, 47, 86)], [(23, 49, 86)] ,[(23, 39, 86)]
+#trigger positions
+# tiles_Position_array ([377, 539], [475, 368], [560, 388], [643, 283])
+# tiles_Color_array = ([(22, 45, 86)], [(21, 47, 86)], [(23, 49, 86)] ,[(23, 39, 86)]
 
 #view location of the set click points
 pyautogui.displayMousePosition()
@@ -27,6 +28,7 @@ def click(x,y):
 
 def main():
     try:
+        #use keyboard function to trigger stop
         while keyboard.is_pressed('q') == False:
             for x,y in line1:
                 if pyautogui.pixel(x,y)[2] == 86:
@@ -37,3 +39,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""I am using the lagged.com piano tiles 3"""
